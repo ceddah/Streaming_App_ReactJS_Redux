@@ -15,7 +15,7 @@ class GoogleAuth extends React.Component {
             });
         });
     }
-
+    //Gets True or False 
     onAuthChange = (isSignedIn) => {
         if(isSignedIn) {
             //Passing the userId to action creator which will put userId in state.auth.isSignedIn
