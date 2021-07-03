@@ -23,6 +23,7 @@ class StreamForm extends React.Component {
         }
     }
 
+    //This function will always pull out form values upon submit and passed them out of component
     onSubmit = (formValues) => {
         this.props.onSubmit(formValues)
     }
@@ -41,7 +42,7 @@ class StreamForm extends React.Component {
         )
     }
 }
-
+//Checking if Inputs are valid, and its making a check onInput
 const validate = (formValues) => {
     const errors = {}
     if(!formValues.title) {
@@ -53,6 +54,7 @@ const validate = (formValues) => {
     return errors;
 }
 
+//'streamForm' will be name of the state in redux store
 export default reduxForm({
     form: 'streamForm',
     validate: validate
